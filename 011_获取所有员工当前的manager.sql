@@ -20,4 +20,4 @@ INSERT INTO dept_emp VALUES(10001,'d001','1986-06-26','9999-01-01'); INSERT INTO
 
 select de.emp_no, dm.emp_no as  manager_no from dept_emp as de
 left join dept_manager as dm on de.dept_no = dm.dept_no
-where de.emp_no != dm.emp_no
+where de.emp_no != dm.emp_no and de.to_date  = "9999-01-01" and  dm.to_date = "9999-01-01"
